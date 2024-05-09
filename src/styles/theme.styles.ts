@@ -59,6 +59,11 @@ const theme: Theme = createTheme({
           "&:hover:not(.Mui-disabled, .Mui-error):before": {
             border: "none",
           },
+          "&.Mui-error": {
+            background: "rgba(255, 97, 85, 0.15)",
+            border: "1px solid #FF6155",
+            color: "#FF6155",
+          },
         },
         underline: {
           "&:before": {

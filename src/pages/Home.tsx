@@ -24,6 +24,7 @@ const Home: React.FC = () => {
   const theme = useTheme();
   const matchesLG = useMediaQuery(theme.breakpoints.up("lg"));
   const { classes } = useHomeStyles();
+
   return (
     <Grid
       container

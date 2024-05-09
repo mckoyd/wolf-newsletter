@@ -3,19 +3,22 @@ import React, { useCallback, useState } from "react";
 import { useEmailInputStyles } from "../styles/emailInput.styles";
 import { emailInputText } from "../config/emailInput.config";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { emailState } from "../state/emailAtom";
 
 const EmailInput: React.FC = () => {
   const navigate = useNavigate();
   const { classes } = useEmailInputStyles();
 
-  const [emailValue, setEmailValue] = useState<string>("");
+  const [emailValue, setEmailValue] = useRecoilState(emailState);
   const [emailHelperValue, setEmailHelperValue] = useState<string>("");
 
-  const handleEmailInput = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setEmailValue(e.target.value);
-  };
+  const handleEmailInput = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setEmailValue(e.target.value);
+    },
+    [setEmailValue]
+  );
 
   const handleSubscribeBtn = useCallback(() => {
     const isValid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
