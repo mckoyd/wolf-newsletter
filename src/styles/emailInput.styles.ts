@@ -12,7 +12,8 @@ export const useEmailInputStyles = tss.create(({ theme }) => ({
     textTransform: "none",
     marginBottom: "1rem",
     "&:hover": {
-      background: "#242742",
+      background: "linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%)",
+      boxShadow: "0px 16px 32px rgba(255, 97, 85, 0.5)",
     },
   },
 }));

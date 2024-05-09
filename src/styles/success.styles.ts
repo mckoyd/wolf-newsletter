@@ -6,6 +6,12 @@ export const useSuccessStyles = tss.create(({ theme }) => ({
     height: "100vh",
     width: "100vw",
     padding: "8em 2em 2em 2em",
+    [theme.breakpoints.up("lg")]: {
+      width: "25vw",
+      height: "50vh",
+      padding: "3em",
+      borderRadius: "0.5rem",
+    },
   },
   dismissBtn: {
     color: theme.palette.common.white,
@@ -15,7 +21,8 @@ export const useSuccessStyles = tss.create(({ theme }) => ({
     textTransform: "none",
     marginBottom: "1rem",
     "&:hover": {
-      background: "#242742",
+      background: "linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%)",
+      boxShadow: "0px 16px 32px rgba(255, 97, 85, 0.5)",
     },
   },
 }));

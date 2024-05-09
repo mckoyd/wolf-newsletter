@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import { ReactComponent as SuccessImg } from "../assets/images/icon-success.svg";
-import { useSuccessStyles } from "../styles/sucess.styles";
+import { useSuccessStyles } from "../styles/success.styles";
 import { useNavigate } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { emailState } from "../state/emailAtom";
