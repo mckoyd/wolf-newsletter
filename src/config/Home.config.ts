@@ -20,7 +20,4 @@ export const homePageText = {
   title: "Stay updated!",
   listTitleText: "Join 60,000+ product managers receiving monthly updates on:",
   updates,
-  emailLabel: "Email address",
-  emailPlaceholder: "email@company.com",
-  buttonText: "Subscribe to monthly newsletter",
 };

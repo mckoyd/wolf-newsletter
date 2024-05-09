@@ -3,15 +3,18 @@ import { Theme, createTheme } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface CommonColors {
     darkNavy: string;
+    paleNavy: string;
   }
 }
 
 const darkNavy: string = "#242742";
+const paleNavy: string = "#36384D";
 
 const theme: Theme = createTheme({
   palette: {
     common: {
       darkNavy,
+      paleNavy,
     },
   },
   typography: {
@@ -53,6 +56,9 @@ const theme: Theme = createTheme({
           border: "1px solid rgba(25, 24, 43, 0.25)",
           borderRadius: "0.5rem",
           padding: "0.5rem",
+          "&:hover:not(.Mui-disabled, .Mui-error):before": {
+            border: "none",
+          },
         },
         underline: {
           "&:before": {

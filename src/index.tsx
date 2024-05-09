@@ -4,7 +4,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import App from "./pages/App";
 import { CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
-import theme from "./styles/theme";
+import theme from "./styles/theme.styles";
 
 const router = createHashRouter([
   {

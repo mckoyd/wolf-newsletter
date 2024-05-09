@@ -1,8 +1,17 @@
 import { tss } from "tss-react/mui";
 
 export const useHomeStyles = tss.create(({ theme }) => ({
-  signUpMobileImg: {
-    height: "17.75rem",
+  homeContainer: {
+    background: "#FFF",
+    borderRadius: "10px",
+  },
+  signUpImg: {
+    width: "100vw",
+    [theme.breakpoints.up("lg")]: {
+      width: "75%",
+      height: "100%",
+      padding: "0.5em 0",
+    },
   },
   listContainer: {
     margin: "1rem 0",
@@ -17,15 +26,5 @@ export const useHomeStyles = tss.create(({ theme }) => ({
   },
   listItemTextContainer: {
     margin: 0,
-  },
-  textField: {
-    marginBottom: "1rem",
-  },
-  subscribeBtn: {
-    color: theme.palette.common.white,
-    background: "#242742",
-    borderRadius: "0.5rem",
-    padding: "1rem",
-    textTransform: "none",
   },
 }));
